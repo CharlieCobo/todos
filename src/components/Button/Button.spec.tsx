@@ -1,7 +1,8 @@
 import { describe, it, expect, vi, afterEach } from 'vitest';
 import { render, fireEvent, screen, cleanup } from '@testing-library/react';
 
-import { Button, Props } from '.';
+import { Button as BaseButton, Props } from '.';
+import withStyled from '../../HOC/withStyled';
 
 describe('<Button />', () => {
   afterEach(cleanup);
@@ -11,7 +12,10 @@ describe('<Button />', () => {
     onClick: vi.fn(),
   };
 
+  const Button = withStyled(BaseButton);
+
   it('Should match with the snapshot', () => {
+    const Button = withStyled(BaseButton);
     const { container } = render(<Button {...initialProps} />);
 
     expect(container).toMatchSnapshot();

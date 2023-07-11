@@ -3,7 +3,7 @@
 exports[`<Button /> > Should match with the snapshot 1`] = `
 <div>
   <button
-    class="css-1bi00ci"
+    class="css-v5hlya"
   >
     Click Me!
   </button>
