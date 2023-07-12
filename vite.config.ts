@@ -5,14 +5,6 @@ import react from '@vitejs/plugin-react-swc';
 export default defineConfig({
   plugins: [react()],
   base: '/todos',
-  server: {
-    proxy: {
-      '/api': {
-        target: 'https://apimocha.com/chuckcobo',
-        changeOrigin: true,
-      },
-    },
-  },
   test: {
     environment: 'happy-dom',
     globals: true,

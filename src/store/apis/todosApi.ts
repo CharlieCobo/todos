@@ -4,7 +4,7 @@ import { ITodo } from '../../interfaces';
 export const todosApi = createApi({
   reducerPath: 'todos',
   baseQuery: fetchBaseQuery({
-    baseUrl: '/api/v1',
+    baseUrl: import.meta.env.VITE_BASE_URL as string,
   }),
   endpoints: builder => ({
     getTodos: builder.query<ITodo[], void>({
