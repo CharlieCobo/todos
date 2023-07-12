@@ -6,8 +6,8 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      '/todo': {
-        target: 'https://apimocha.com/chuckcobo/api/v1/todo',
+      '/api': {
+        target: 'https://apimocha.com/chuckcobo',
         changeOrigin: true,
       },
     },

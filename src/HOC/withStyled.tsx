@@ -6,8 +6,8 @@ import { GlobalStyles, darkTheme } from '../themes';
 const withStyled = <P extends object>(Component: ComponentType<P>) => {
   return (props: P) => (
     <>
-      <GlobalStyles />
       <ThemeProvider theme={darkTheme}>
+        <GlobalStyles />
         <Component {...props} />
       </ThemeProvider>
     </>
