@@ -1,16 +1,10 @@
 import { ReactNode } from 'react';
 import { CardStyled } from './styles';
-import { P } from '../../styles';
 
 interface Props {
-  title: string;
-  budge?: () => ReactNode;
+  title: () => ReactNode;
 }
 
 export const Card = ({ title }: Props) => {
-  return (
-    <CardStyled>
-      <P>{title}</P>
-    </CardStyled>
-  );
+  return <CardStyled>{title()}</CardStyled>;
 };
