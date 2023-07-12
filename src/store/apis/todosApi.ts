@@ -4,7 +4,7 @@ import { ITodo } from '../../interfaces';
 export const todosApi = createApi({
   reducerPath: 'todos',
   baseQuery: fetchBaseQuery({
-    baseUrl: import.meta.env.VITE_BASE_URL as string,
+    baseUrl: 'https://apimocha.com/chuckcobo/api/v1',
   }),
   endpoints: builder => ({
     getTodos: builder.query<ITodo[], void>({

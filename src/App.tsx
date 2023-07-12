@@ -12,6 +12,7 @@ import { Card } from './components/Card';
 function App() {
   const { data, isLoading, isError } = useGetTodosQuery();
 
+  console.log(import.meta.env.VITE_BASE_URL);
   if (isError) return <p>Something is wrong</p>;
   return (
     <>
