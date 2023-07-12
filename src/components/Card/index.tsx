@@ -7,7 +7,7 @@ interface Props {
   budge?: () => ReactNode;
 }
 
-export const Card = ({ budge, title }: Props) => {
+export const Card = ({ title }: Props) => {
   return (
     <CardStyled>
       <P>{title}</P>

@@ -1,7 +1,7 @@
 import withStyled from './HOC/withStyled';
 import withGlobalState from './HOC/withGlobalState';
 
-import { Counter } from './components/Counter';
+// import { Counter } from './components/Counter';
 import { useGetTodosQuery } from './store/apis';
 import { Navbar } from './components/Navbar';
 import { Main } from './components/Main';
