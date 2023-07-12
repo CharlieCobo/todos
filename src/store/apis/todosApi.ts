@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { ITodo } from '../../interfaces';
 
 export const todosApi = createApi({
-  reducerPath: 'todosApi',
+  reducerPath: 'todos',
   baseQuery: fetchBaseQuery({
     baseUrl: '/api/v1',
   }),

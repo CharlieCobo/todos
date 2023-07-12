@@ -3,3 +3,8 @@ export interface ITodo {
   id: number;
   status: boolean;
 }
+
+export interface IICon {
+  size?: number;
+  strokeColor: string;
+}
