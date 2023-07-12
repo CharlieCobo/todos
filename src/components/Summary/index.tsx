@@ -16,8 +16,8 @@ export const Summary = () => {
   return (
     <SummaryStyled>
       <P>Total: {total}</P>
-      <P>Close: {close}</P>
-      <P>Open: {open}</P>
+      <P variant="success">Close: {close}</P>
+      <P variant="warning">Open: {open}</P>
     </SummaryStyled>
   );
 };

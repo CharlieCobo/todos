@@ -10,10 +10,16 @@ export const H1 = styled.h1`
 
 interface PProps {
   done?: boolean;
+  variant?: 'primary' | 'warning' | 'success' | 'default';
 }
 
 export const P = styled.p<PProps>`
-  color: ${({ theme }) => theme.colors['grey-200']};
+  color: ${({ theme, variant }) =>
+    variant === 'warning'
+      ? theme.colors.warning
+      : variant === 'success'
+      ? theme.colors.success
+      : theme.colors['grey-200']};
   font-family: 'Montserrat', sans-serif;
   font-size: 1.4rem;
   font-style: normal;

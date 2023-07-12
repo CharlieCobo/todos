@@ -8,6 +8,8 @@ export const darkTheme: Theme = {
     primary: '#f27a54',
     secondary: '#A154F2',
     tertiary: '#6FCF97',
+    warning: '#ff4500',
+    success: '#6FCF97',
     'grey-400': '#3C444C',
     'grey-300': '#747D88',
     'grey-200': '#CBCFD4',

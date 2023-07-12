@@ -8,6 +8,8 @@ declare module '@emotion/react' {
       primary: string;
       secondary: string;
       tertiary: string;
+      warning: string;
+      success: string;
       'grey-400': string;
       'grey-300': string;
       'grey-200': string;
