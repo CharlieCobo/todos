@@ -1,17 +1,22 @@
-import { useState } from 'react';
-import { Button } from './components/Button';
+import { useEffect } from 'react';
+
 import withStyled from './HOC/withStyled';
+import withGlobalState from './HOC/withGlobalState';
+
+import { Counter } from './components/Counter';
+import { useGetTodosQuery } from './store/apis';
 
 function App() {
-  const [count, setCount] = useState(0);
+  const { data, isLoading, isError } = useGetTodosQuery();
 
+  if (isError) return <p>Something is wrong</p>;
   return (
     <>
-      <p>Count: {count}</p>
-      <Button label="Increment" onClick={() => setCount(count + 1)} />
-      <Button label="Decrement" onClick={() => setCount(count - 1)} />
+      <Counter />
+      {isLoading && <p>Loading...</p>}
+      {data?.map?.(({ description, id, status }) => <p key={id}>{description}</p>)}
     </>
   );
 }
 
-export default withStyled(App);
+export default withGlobalState(withStyled(App));
