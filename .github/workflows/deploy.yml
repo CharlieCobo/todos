@@ -37,6 +37,8 @@ jobs:
           cache: 'yarn'
       - name: Install dependencies
         run: yarn install
+        env:
+          VITE_BASE_URL: ${{ secrets.VITE_BASE_URL }}
       - name: Build
         run: yarn build
       - name: Setup Pages
